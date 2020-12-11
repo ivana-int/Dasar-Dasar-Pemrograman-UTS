@@ -17,7 +17,7 @@ soal_prompts = [
     "\n10. Diketahui kubus ABCD.EFGH dengan panjang rusuk = a. Jarak titik F ke garis AH adalah... \na. 1/2 a√2 \nb. 1/2 a√3 \nc. a \nd. 1/2a√5 \ne. 1/2a√6 \nMasukkan jawaban : ",
 ]
 
-pertanyaan = [
+kunci = [
     Question(soal_prompts[0], "d"),
     Question(soal_prompts[1], "b"),
     Question(soal_prompts[2], "c"),
@@ -30,12 +30,12 @@ pertanyaan = [
     Question(soal_prompts[9], "e"),
 ]
 
-def run_test(pertanyaan):
+def run_test(kunci):
     score = 0
-    for soal in pertanyaan:
+    for soal in kunci:
         jawab = input(soal.prompt)
         if jawab == soal.jawab:
             score += 1
-    print("\nKamu mendapat " + str(score) + "/" + str(len(pertanyaan)) + " benar")
+    print("\nKamu mendapat " + str(score) + "/" + str(len(kunci)) + " benar")
     print("Tetap semangat dan berlatih lagi!")
-run_test(pertanyaan)
+run_test(kunci)
