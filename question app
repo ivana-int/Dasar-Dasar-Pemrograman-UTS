@@ -1,0 +1,41 @@
+from Question import Question
+
+print("MATHEMATIC QUESTION FOR SMA")
+print("ASAH KEMAMPUANMU!")
+#OLEH IVANA INTAN PARAMITA DAN SULAS SRI
+      
+soal_prompts = [
+    "\n1. Pada kubus ABCD.EFGH yang bukan diagonal bidang adalah... \na. FH \nb. CF \nc. AC \nd. DF \ne. HC \nMasukkan jawaban : ",
+    "\n2. Panjang diagonal bidang kubus PQRS.TUVW yang panjang rusuknya 10cm adalah... \na. 10 \nb. 10 √2 \nc. 10 √3 \nd. 5 √2 \ne. 5 √3 \nMasukkan jawaban : ",
+    "\n3. Pada kubus ABCD.EFGH besar sudut yang dibentuk oleh diagonal bidang AH dengan AF adalah... \na. 30º \nb. 45º \nc. 60º \nd. 75º \ne. 90º \nMasukkan jawaban : ",
+    "\n4. Pada kubus ABCD.EFGH yang bukan diagonal ruang adalah... \na. BH \nb. AG \nc. CG \nd. AC \ne. DF \nMasukkan jawaban : ",
+    "\n5. Diagonal ruang DF pada kubus ABCD.EFGH tidak bersilangan dengan garis... \na. BC \nb. AB \nc. GB \nd. GD \ne. CH \nMasukkan jawaban : ",
+    "\n6. Panjang diagonal ruang kubus yang mempunyai rusuk 8 cm adalah... \na. 4 √2  cm \nb. 4 √3  cm \nc. 8 cm \nd. 8 √2 cm \ne. 8 √3 cm \nMasukkan jawaban : ",
+    "\n7. Pada kubus ABCD.EFGH sudut yang dibentuk bidang AFGD dengan bidang ABCD dapat diwakili oleh sudut... \na. ∠ABF \nb. ∠BFA \nc. ∠BAF \d. ∠CGD \ne. ∠DCG \nMasukkan jawaban : ",
+    "\n8. Pada kubus PQRS.TUVW sudut yang dibentuk oleh garis PW dengan bidang QUWS adalah setengah dari... \na. ∠PWR \nb. ∠WPR \nc. ∠PRW \nd. ∠PWV \ne. ∠QWR \nMasukkan jawaban : ",
+    "\n9. Diketahui kubus KLMN.PQRS dengan panjang rusuk 6 cm. Jika sudut yang dibentuk oleh PL dan RL adalah α maka cos α   = ... \na. 1/2 \nb. 1/2 √2 \nc. 1/2 √3 \nd. 1/4 √3 \ne. 1/4 √2\nMasukkan jawaban : ",
+    "\n10. Diketahui kubus ABCD.EFGH dengan panjang rusuk = a. Jarak titik F ke garis AH adalah... \na. 1/2 a√2 \nb. 1/2 a√3 \nc. a \nd. 1/2a√5 \ne. 1/2a√6 \nMasukkan jawaban : ",
+]
+
+pertanyaan = [
+    Question(soal_prompts[0], "d"),
+    Question(soal_prompts[1], "b"),
+    Question(soal_prompts[2], "c"),
+    Question(soal_prompts[3], "d"),
+    Question(soal_prompts[4], "d"),
+    Question(soal_prompts[5], "e"),
+    Question(soal_prompts[6], "c"),
+    Question(soal_prompts[7], "a"),
+    Question(soal_prompts[8], "a"),
+    Question(soal_prompts[9], "e"),
+]
+
+def run_test(pertanyaan):
+    score = 0
+    for soal in pertanyaan:
+        jawab = input(soal.prompt)
+        if jawab == soal.jawab:
+            score += 1
+    print("\nKamu mendapat " + str(score) + "/" + str(len(pertanyaan)) + " benar")
+    print("Tetap semangat dan berlatih lagi!")
+run_test(pertanyaan)
