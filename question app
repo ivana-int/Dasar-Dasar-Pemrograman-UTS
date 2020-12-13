@@ -1,4 +1,7 @@
-from Question import Question
+class Question:
+   def__init__(self, prompt, jawab):
+     self.prompt = prompt
+     self.jawab = jawab 
 
 print("MATHEMATIC QUESTION FOR SMA")
 print("ASAH KEMAMPUANMU!")
@@ -35,7 +38,8 @@ def run_test(kunci):
     for soal in kunci:
         jawab = input(soal.prompt)
         if jawab == soal.jawab:
-            score += 1
-    print("\nKamu mendapat " + str(score) + "/" + str(len(kunci)) + " benar")
+            score += 10
+    print("\nKamu mendapat nilai: ", str(score))
+    print("\nDari: ", str(len(kunci)) + "soal")
     print("Tetap semangat dan berlatih lagi!")
 run_test(kunci)
